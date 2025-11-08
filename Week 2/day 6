@@ -1,0 +1,114 @@
+
+
+ls -al ~/.ssh  (chck if i have id_rsa)
+
+ssh-keygen -t ed25519 -C "muskanchoudhary718@gmail.com" (generate SSH key)
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519  (start SSH agent and add key)
+
+cat ~/.ssh/id_ed25519.pub
+
+
+
+ssh -T git@github.com  (Test connection) 
+
+
+
+
+git clone git@github.com:muskanchoudhary1/test-repo.git
+
+cd test-repo
+
+echo "Hello CKers" > test.txt 
+
+git add test.txt
+
+git commit -m "Add test.txt"
+
+git push origin main
+
+
+
+
+
+git branch f1
+git branch f2
+
+
+git checkout f1
+echo "Change in f1 branch" >> test.txt
+git commit -am "Update test.txt in f1"
+
+
+git checkout f2
+echo "Change in f2 branch" >> test.txt
+git commit -am "Update test.txt in f2"
+
+git merge f1
+
+// keep desired content
+
+git add test.txt
+git commit -m "Resolved merge conflict"
+
+
+
+
+-> Divergence (2 branches started from same point but went diff dirction with their own commit)
+
+
+cd test-repo
+
+git checkout main
+
+echo "Change from main branch" >> test.txt
+git add test.txt
+git commit -m "Add change in main"
+
+
+git checkout f1
+
+echo "Change from f1 branch" >> test.txt
+git add test.txt
+git commit -m "Add change in f1"
+
+
+git log --oneline --graph --all
+
+(when i push give error so i use fetch thn merge thn add commit)
+
+
+
+
+
+-> Squash Commits
+
+git log --oneline (chck commit histry)
+
+git rebase -i HEAD~3
+(chnge all pick->squash except first)
+
+ctrl + o
+enter
+ctrl + x
+
+edit msg (save nd close)
+
+
+nano test.txt (chck file cnflict)
+git add test.txt
+git rebase --continue   (git rebase abort)
+
+git log --oneline (chck commit histry)
+
+
+
+
+
+-> Delete branch from local and remote
+
+git branch -d f1 (local branch) (-d safe dlt -D force dlt)
+
+git push origin --delete f1 (dlt branch on remote)
+

@@ -1,0 +1,164 @@
+Ques 1 :-
+
+ps
+
+ps aux    (show process from all users , show username and extra detail, show processes tht r not cnncted to a terminal)
+
+ps aux --sort=-%mem | head -n 10    (define sort col,sort key(mry),-desc ordr)
+
+sudo kill pid
+
+OR 
+
+Use top → Press Shift + M → Note PID → Press k → Done 
+
+
+
+Ques 2 :-
+
+sudo adduser devops
+
+sudo usermod -aG sudo devops  
+
+(adds user devops to the sudo group — giving her admin privileges
+Without removing her from other groups)
+
+su - devops
+
+sudo whoami
+
+groups devops
+
+
+
+
+
+ques 3 :-
+
+
+
+$ ssh rimjhim-agrawal@192.168.1.29
+
+rimjhim-agrawal@192.168.1.29's password: 
+
+mkdir Myques
+
+scp muskan-choudhary@192.168.1.18:/home/muskan-choudhary/errors_found.txt /home/rimjhim-agrawal/Myques
+
+exit
+
+
+
+
+
+Ques 4 :-
+
+ps aux
+
+ps aux | grep java
+
+ps aux | grep java | grep -v grep
+
+ps aux | grep java | grep -v grep > java_processes.txt
+
+cat java_processes.txt
+
+
+
+
+
+
+Ques 6
+
+grep "error" /var/log/syslog  ( 2> errror which come from tht command )
+
+grep -i "error" /var/log/syslog > errors_found.txt    (overwrite)
+
+grep -i "error" /var/log/syslog >> errors_found.txt   (append) (chck case sensative)
+
+cat errors_found.txt
+
+
+
+
+Ques 7 :-
+
+
+find /etc -name "*.conf" 
+
+find /etc -name "*.cong" | sort
+
+sudo find /etc -name "*.conf" | sort > conf_list.txt
+
+cat conf_list.txt
+
+
+
+Ques 8 :-
+
+
+cat /etc/passwd
+
+cut -d: -f7 /etc/passwd | sort | uniq | wc -l  (it count no of lines, set delimeter, 7th col)
+
+
+
+
+
+Ques 9 :-
+
+sudo apt install vim
+
+vim --version
+
+
+
+
+
+
+Ques 10 :
+
+passwd
+
+sudo reboot
+
+
+
+
+
+Ques 11 :-
+
+tar -cvf Myques2.tar mytask
+
+ssh rimjhim-agrawal@192.168.1.29
+
+scp muskan-choudhary@192.168.1.18:/home/muskan-choudhary/Myques2.tar /home/rimjhim-agrawal
+
+tar -xvf Myques2.tar
+
+exit
+
+
+
+
+Ques 12 :-
+
+sudo apt install mysql-server -y
+
+sudo mysql_secure_installation
+
+sudo systemctl start mysql
+sudo systemctl enable mysql  # start automatically on boot
+
+sudo systemctl status mysql
+
+
+
+sudo snap install postman
+
+
+
+
+
+
+

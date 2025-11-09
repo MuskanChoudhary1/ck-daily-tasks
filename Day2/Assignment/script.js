@@ -1,12 +1,13 @@
 // FORM VALIDATION 
 document.getElementById("userForm").addEventListener("submit", function (event) {
-  event.preventDefault(); 
+  // event.preventDefault(); 
 
   const name = document.getElementById("name").value;
   const age = parseInt(document.getElementById("age").value);
   const msg = document.getElementById("formMessage");
 
     if (!name) {
+      event.preventDefault();
     msg.textContent = "Please enter your name.";
     msg.style.color = "red";
   } else if (!age || age < 18) {
@@ -48,7 +49,7 @@ arr.shift();
 console.log("After removing 1st no :", arr);
 
 //Ques 5 Add no at specific index (index 2)
-arr.splice(2, 0, 800);
+arr.splice(2, 0, 800);             // startIndex, deleteCount, item1, item2, ...
 console.log("After add no at specific index :", arr);
 
 

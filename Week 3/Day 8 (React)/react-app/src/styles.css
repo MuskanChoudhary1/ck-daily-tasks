@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  list-style: none;
+  padding: 10px;
+  background: grey;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+button {
+  padding: 8px 14px;
+  margin-right: 10px;
+  background: grey;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkgray;
+}
+
+.container {
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+.login-page {
+  max-width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}

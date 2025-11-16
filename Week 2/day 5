@@ -1,3 +1,4 @@
+
 Ques 1 :-
 
 ps
@@ -158,6 +159,59 @@ sudo snap install postman
 
 
 
+
+Ques :
+
+vim practice.txt
+i -> strt typing at cursr pnt
+a -> strt typing aftr cursr
+o -> insrt new line below curr line 
+O -> insrt new line above curr line
+
+i -> type
+
+Esc -> for norml mode
+
+MOVING CURSR :
+h
+j
+k
+l
+o -> go to beginning of line
+$ -> go to end of line 
+w -> jump to start of next wrd
+b -> jump to strt of pre word
+
+
+DELETING TEXT:
+x
+dd
+Ndd
+dw
+d$ -> dlt frm cursr to end of line
+
+
+COPY/PASTE :
+yy
+Nyy
+yw
+p
+
+REDO/UNDO
+u
+ctrl + r
+
+SEARCH :
+/word
+?word
+n -> go to next match
+N -> go to pre match
+
+SAVE/QUIT
+:w -> save chnges
+:q
+:wq OR :x
+:q! -> quit without saving
 
 
 

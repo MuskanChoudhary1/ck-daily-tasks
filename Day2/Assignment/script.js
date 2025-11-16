@@ -7,7 +7,7 @@ document.getElementById("userForm").addEventListener("submit", function (event) 
   const msg = document.getElementById("formMessage");
 
     if (!name) {
-      event.preventDefault();
+    event.preventDefault();
     msg.textContent = "Please enter your name.";
     msg.style.color = "red";
   } else if (!age || age < 18) {
